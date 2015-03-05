@@ -14,7 +14,7 @@ class NotificationManager(Manager):
         return NotificationQuerySet(self.model, using=self._db)
 
     def get_queryset(self):
-        return self.get_queryset()
+        return self.get_query_set()
 
     def active(self):
         return self.get_queryset().active()
